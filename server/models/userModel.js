@@ -12,6 +12,7 @@ const userSchema = new mongoose.Schema({
         email: String,
         department: String,
         phone: String,
+        designation: String,
         bio: {  
             type: Map,
             of: [String] 
@@ -21,6 +22,10 @@ const userSchema = new mongoose.Schema({
             of: [String]
         },
         facultyPageRoute: { type: String},
+        imageLink: {type:String},
+        staff: { type: Boolean, default: false },
+        researcharea: String,
+        courses: String,
     },
     verified: { type: Boolean, default: false }
 });
